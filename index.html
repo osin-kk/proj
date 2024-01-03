@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .game-board {
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 10px;
+            max-width: 500px;
+        }
+        .cell {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+        }
+        .keyboard {
+            margin-top: 20px;
+        }
+        .key {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #333;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Word Guessing Game</h1>
+    <div class="game-board">
+        <!-- Generate 30 cells (6 rows x 5 letters) -->
+        <% for (let i = 0; i < 30; i++) { %>
+            <div class="cell"></div>
+        <% } %>
+    </div>
+
+    <div class="keyboard">
+        <!-- Add keys for the keyboard -->
+        <% "QWERTYUIOPASDFGHJKLZXCVBNM".split('').forEach(letter => { %>
+            <div class="key"><%= letter %></div>
+        <% }) %>
+    </div>
+
+    <script>
+        // JavaScript to handle game logic and keyboard interaction will go here
+    </script>
+</body>
+</html>
 
